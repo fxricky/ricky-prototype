@@ -2,14 +2,15 @@
  * @format
  */
 
-import {Navigation} from 'react-native-navigation';
-// import {AppRegistry} from 'react-native';
-import App from './App';
-// import {name as appName} from './app.json';
+import { Navigation } from "react-native-navigation";
+import App from "./App";
 
-// AppRegistry.registerComponent(appName, () => App);
-
-Navigation.registerComponent('com.ricky_prototype', () => App);
+Navigation.registerComponent("root", () => App);
+Navigation.setDefaultOptions({
+  topBar: {
+    visible: false,
+  },
+});
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
@@ -17,7 +18,7 @@ Navigation.events().registerAppLaunchedListener(() => {
         children: [
           {
             component: {
-              name: 'com.ricky_prototype',
+              name: "root",
             },
           },
         ],
