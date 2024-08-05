@@ -3,8 +3,9 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "react-native-navigation";
 import color from "@/theme/color";
 import { typography } from "@/theme/typography";
+import RButton from "@/components/RButton";
 
-function Walkthrough(): React.JSX.Element {
+function WalkthroughScreen(): React.JSX.Element {
   return (
     <View style={styles.container}>
       <View style={styles.sectionImg}>
@@ -28,9 +29,7 @@ function Walkthrough(): React.JSX.Element {
           product ever.
         </Text>
         <View style={{ height: 24 }} />
-        <Pressable style={styles.btnNext}>
-          <Text style={styles.btnNext__lbl}>Next</Text>
-        </Pressable>
+        <RButton label={"Next"} />
       </View>
     </View>
   );
@@ -82,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-Navigation.registerComponent("Walkthrough", () => Walkthrough);
+Navigation.registerComponent("Walkthrough", () => WalkthroughScreen);

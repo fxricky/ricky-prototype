@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnNext__lbl: {
-    ...typography(12),
+    ...typography().action.m,
     color: color.NEUTRAL.LIGHT.LIGHTEST,
   },
 });
