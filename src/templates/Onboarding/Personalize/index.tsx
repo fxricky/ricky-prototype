@@ -34,6 +34,7 @@ function PersonalizeScreen(): React.JSX.Element {
           data={personaliseOption}
           renderItem={renderListItem}
           style={styles.optionsContainer}
+          showsVerticalScrollIndicator={false}
           ItemSeparatorComponent={() => (
             <View style={styles.optionsContainer__seperator} />
           )}
@@ -72,10 +73,10 @@ const styles = StyleSheet.create({
     height: 8,
   },
   txtHeader: {
-    ...typography(24),
+    ...typography().heading.h1,
   },
   txtDescription: {
-    ...typography(14),
+    ...typography().body.m,
   },
   txtSeperator: {
     height: 16,

@@ -1,5 +1,6 @@
 import { icCheck } from "@/assets/icons";
 import color from "@/theme/color";
+import { typography } from "@/theme/typography";
 import { Image, StyleSheet, Text, View } from "react-native";
 
 type Props = {
@@ -14,7 +15,7 @@ function ListItem({ selected, label }: Props): React.JSX.Element {
 
   return (
     <View style={overrideStyle}>
-      <Text>{label}</Text>
+      <Text style={styles.txtLabel}>{label}</Text>
       {selected ? <Image style={styles.iconCheck} source={icCheck} /> : null}
     </View>
   );
@@ -36,6 +37,9 @@ const styles = StyleSheet.create({
   iconCheck: {
     height: 12,
     width: 12,
+  },
+  txtLabel: {
+    ...typography().body.m,
   },
 });
 

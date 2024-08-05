@@ -63,10 +63,10 @@ const styles = StyleSheet.create({
     backgroundColor: color.PRIMARY.DARKEST,
   },
   txtHeader: {
-    ...typography(24),
+    ...typography().heading.h1,
   },
   txtDescription: {
-    ...typography(12),
+    ...typography().body.s,
     color: color.NEUTRAL.DARK.LIGHT,
   },
   btnNext: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnNext__lbl: {
-    ...typography(12),
+    ...typography().action.m,
     color: color.NEUTRAL.LIGHT.LIGHTEST,
   },
 });
