@@ -7,6 +7,7 @@ import color from "@/theme/color";
 
 import "@/templates/Onboarding/Walkthrough";
 import "@/templates/Onboarding/Personalize";
+import "@/templates/SubscriptionPlan";
 
 const TEMPLATES: { label: string; screenName: string }[] = [
   {
@@ -16,6 +17,10 @@ const TEMPLATES: { label: string; screenName: string }[] = [
   {
     label: "Onboarding.Personalize",
     screenName: "Personalize",
+  },
+  {
+    label: "Subsription Plan",
+    screenName: "SubscriptionPlan",
   },
 ];
 

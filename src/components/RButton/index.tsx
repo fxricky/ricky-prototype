@@ -6,7 +6,7 @@ type Props = PressableProps & {
   label: string;
 };
 
-function RButton({ label, ...props }: Props): React.JSX.Element {
+function RButton({ style, label, ...props }: Props): React.JSX.Element {
   return (
     <Pressable style={styles.btnNext} {...props}>
       <Text style={styles.btnNext__lbl}>{label}</Text>
