@@ -4,7 +4,6 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "react-native-navigation";
 import {
   SafeAreaProvider,
-  useSafeAreaFrame,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 import PlanItem, { TPlan } from "./PlanItem";
