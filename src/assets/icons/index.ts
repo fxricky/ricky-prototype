@@ -9,6 +9,7 @@ import icFbLogin from "./icFbLogin.png";
 import icGoogleLogin from "./icGoogleLogin.png";
 import icEyeInvisible from "./icEyeInvisible.png";
 import icEyeVisible from "./icEyeVisible.png";
+import icChevronRight from "./icChevronRight.png";
 
 export {
   icImage,
@@ -22,4 +23,5 @@ export {
   icGoogleLogin,
   icEyeInvisible,
   icEyeVisible,
+  icChevronRight,
 };
