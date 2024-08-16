@@ -60,7 +60,7 @@ function App({ componentId }: { componentId: string }): React.JSX.Element {
       <Pressable
         style={styles.section__item}
         onPress={navigate(item.screenName)}>
-        <Text>{item.label}</Text>
+        <Text style={styles.section__item__label}>{item.label}</Text>
         <Image style={styles.section__item__icon} source={icChevronRight} />
       </Pressable>
     );
@@ -149,6 +149,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  section__item__label: {
+    ...typography().body.m,
   },
   section__item__icon: {
     height: 12,
