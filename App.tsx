@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Image,
+  Linking,
   Pressable,
   SectionList,
   SectionListRenderItem,
@@ -50,6 +51,10 @@ function App({ componentId }: { componentId: string }): React.JSX.Element {
     });
   };
 
+  const handleProfileClick = () => {
+    Linking.openURL("https://www.figma.com/@renataporto");
+  };
+
   const renderItem: SectionListRenderItem<any> = ({ item }) => {
     return (
       <Pressable
@@ -78,6 +83,15 @@ function App({ componentId }: { componentId: string }): React.JSX.Element {
           <Text style={styles.header__desc}>
             Whether it’s smooth navigation or clean UI elements, these
             components are here to inspire and help you build something amazing.
+          </Text>
+          <Text style={styles.header__credit}>
+            This prototype kit designed by{" "}
+            <Text
+              onPress={handleProfileClick}
+              style={styles.header__credit__profile}>
+              @renataporto
+            </Text>
+            .
           </Text>
         </View>
         <SectionList
@@ -113,6 +127,14 @@ const styles = StyleSheet.create({
     ...typography().body.m,
     textAlign: "justify",
     marginTop: 16,
+  },
+  header__credit: {
+    ...typography().body.xs,
+    color: color.NEUTRAL.DARK.LIGHTEST,
+    marginTop: 16,
+  },
+  header__credit__profile: {
+    textDecorationLine: "underline",
   },
   section__title: {
     ...typography().heading.h1,
